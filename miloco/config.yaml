@@ -17,6 +17,8 @@ map:
   - addon_config:rw
   - homeassistant_config:rw
   - share
+build_args:
+  - BUILD_DATETIME
 schema:
   envs:
     - match(^[A-Z0-9_]+=.*$)
