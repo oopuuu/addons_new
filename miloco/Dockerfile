@@ -16,8 +16,7 @@ ARG VERSION=main
 ARG GITHUB_DOMAIN=ghrp.hacs.vip
 ARG BUILD_DATETIME 
 # 确保这个 RUN 命令在 wget 之前
-RUN echo "Triggering rebuild at ${BUILD_DATETIME}"
-RUN echo "rebuild at ${BUILD_DATETIME}"
+RUN echo "Triggering rebuild at ${BUILD_DATETIME}111"
 WORKDIR /app
 RUN set -eux; \
     sed -i 's/deb.debian.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list.d/debian.sources; \
