@@ -3,7 +3,7 @@ FROM ghcr.io/oopuuu/miloco-backend:latest
 
 # 定义参数 (保留原逻辑中的参数，防止构建脚本报错，虽然有些可能用不到了)
 ARG GITHUB_DOMAIN=ghrp.hacs.vip
-ARG BASHIO_VERSION=v0.18.0
+ARG BASHIO_VERSION=v0.17.0
 
 # 环境变量设置 (根据你的镜像实际情况调整，这里保留了原有的路径配置)
 # 注意：确保你的镜像里这些路径是有效的，或者在这里覆盖它们
