@@ -7,4 +7,7 @@ Xiaomi Local Copilot 以米家摄像机为视觉信息来源，以自研大模�
 - 默认获取音频流
 - 默认获取高清视频流
 
-推荐使用 [micam](https://github.com/miiot/micam) 搭配本加载项转发视频流到外部RTSP服务器(如: Go2rtc)。
+现在无需micam配合就可以获取rtsp视频流，配置好miloco后访问 rtsp://{haos的ip}:{RTSP_PORT}/{相机ID}?video_quality={清晰度}即可
+例如 rtsp://192.168.0.11:8003/1123456789?video_quality=2
+<img src="IMG_0110.png">
+
