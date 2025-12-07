@@ -13,6 +13,7 @@ arch:
 host_network: true
 ports:
   28800/tcp: 28800
+  36674/tcp: 36674
 map:
   - addon_config:rw
   - homeassistant_config:rw
@@ -25,5 +26,6 @@ schema:
 options:
   envs:
     - BACKEND_PORT=28800
+    - RTSP_PORT=36674
     - BACKEND_LOG_LEVEL=warning
     - TZ=Asia/Shanghai
