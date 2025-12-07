@@ -9,6 +9,7 @@ ARG BASHIO_VERSION=v0.17.0
 # 注意：确保你的镜像里这些路径是有效的，或者在这里覆盖它们
 ENV BACKEND_PORT=28800 \
     RTSP_PORT=36674 \
+    LITE_MODE=true \
     BACKEND_LOG_LEVEL=warning \
     MILOCO_SERVER_STORAGE_DIR=/config/miloco_server \
     TZ=Asia/Shanghai
