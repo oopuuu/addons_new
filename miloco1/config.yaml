@@ -1,7 +1,7 @@
 name: 小米Miloco1
 slug: miloco1
 description: Xiaomi Local Copilot 以米家摄像机为视觉信息来源，以自研大模型为核心，打通全屋 IoT 设备。基于大模型的开发范式，让用户能够以自然语言定义家庭的各种需求和规则，实现更广泛、更具创意的智能联动。
-version: 0.1.8
+version: 0.1.9
 url: https://github.com/oopuuu/xiaomi-miloco
 webui: https://[HOST]:[PORT:28800]
 panel_icon: mdi:webcam
@@ -12,7 +12,8 @@ arch:
   - aarch64
 host_network: true
 ports:
-  28800/tcp: 28800
+  28801/tcp: 28801
+  36675/tcp: 36675
 map:
   - addon_config:rw
   - homeassistant_config:rw
@@ -24,6 +25,7 @@ schema:
     - match(^[A-Z0-9_]+=.*$)
 options:
   envs:
-    - BACKEND_PORT=28800
+    - BACKEND_PORT=28801
+    - RTSP_PORT=36675
     - BACKEND_LOG_LEVEL=warning
     - TZ=Asia/Shanghai
