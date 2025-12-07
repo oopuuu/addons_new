@@ -8,7 +8,7 @@ ARG BASHIO_VERSION=v0.17.0
 # 环境变量设置 (根据你的镜像实际情况调整，这里保留了原有的路径配置)
 # 注意：确保你的镜像里这些路径是有效的，或者在这里覆盖它们
 ENV BACKEND_PORT=28800 \
-    RTSP_PORT=36674
+    RTSP_PORT=36674 \
     BACKEND_LOG_LEVEL=warning \
     MILOCO_SERVER_STORAGE_DIR=/config/miloco_server \
     TZ=Asia/Shanghai
