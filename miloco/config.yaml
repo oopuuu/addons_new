@@ -1,6 +1,6 @@
 name: 小米Miloco
 slug: miloco
-description: Xiaomi Local Copilot 以米家摄像机为视觉信息来源，以自研大模型为核心，打通全屋 IoT 设备。基于大模型的开发范式，让用户能够以自然语言定义家庭的各种需求和规则，实现更广泛、更具创意的智能联动。
+description: Xiaomi Local Copilot 修改版，主要增加了内置rtsp推流。
 version: 0.1.9a
 url: https://github.com/oopuuu/xiaomi-miloco
 webui: https://[HOST]:[PORT:28800]
@@ -11,6 +11,11 @@ arch:
   - amd64
   - aarch64
 host_network: true
+
+# [关键修改 1] 开启视频设备访问权限
+# 没有这一行，容器内找不到 /dev/dri，硬件转码必挂
+video: true
+
 ports:
   28800/tcp: 28800
   36674/tcp: 36674
@@ -30,3 +35,8 @@ options:
     - LITE_MODE=true
     - BACKEND_LOG_LEVEL=warning
     - TZ=Asia/Shanghai
+    # [关键修改 2] 添加硬件加速开关，默认为 intel (适配你的 N5105)
+    # 可选值: cpu, intel, nvidia, mac, rpi
+    - MILOCO_HW_ACCEL=intel
+    # 指定渲染设备，通常 N5105 核显就是这个
+    - MILOCO_HW_DEVICE=/dev/dri/renderD128
