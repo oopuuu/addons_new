@@ -1,7 +1,7 @@
 name: 小米Miloco
 slug: miloco
 description: Xiaomi Local Copilot 修改版，主要增加了内置rtsp推流。
-version: 0.1.9b
+version: 0.1.9c
 url: https://github.com/oopuuu/xiaomi-miloco
 webui: https://[HOST]:[PORT:28800]
 panel_icon: mdi:webcam
